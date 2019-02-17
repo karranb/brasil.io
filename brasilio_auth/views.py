@@ -12,6 +12,12 @@ class CreateUserView(CreateView):
     form_class = UserCreationForm
     success_url = settings.LOGIN_REDIRECT_URL
 
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_anonymous:
+            next = self.request.GET.get('next', reverse('core:home'))
+            return redirect(next)
+        return super().dispatch(request, *args, **kwargs)
+
     def get_context_data(self, *args, **kwargs):
         context = super(CreateUserView, self).get_context_data()
         next = self.request.GET.get('next', None)
