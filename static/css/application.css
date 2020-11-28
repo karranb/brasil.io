@@ -3,19 +3,34 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
   position: relative;
   margin: 0;
-  padding-bottom: 12rem;
   min-height: 100%;
   font-family: Roboto, sans-serif;
   font-weight: 300;
+  flex-direction: column;
+  display: flex;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+section {
+  margin: 50px 0;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer.indigo a {
+  color: #00a2ec;
 }
 
 .divider-new:before {
@@ -47,47 +62,24 @@ body {
   margin-bottom: 45px;
 }
 
-.divider-new{
-  font-weight: 300;
-}
-
-.container {
-  padding: 10px;
-}
-
-
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-  color: #1A237E !important;
-  margin-right: 10px;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.card.small {
-  height: 350px;
-}
-
-.card .card-title {
-  font-size: 20px;
+.divider-new {
   font-weight: 300;
 }
 
 .card .card-content.card-body {
-  height: 150px;
+  min-height: 100px;
 }
 
 .card.small .card-description {
   color: rgba(0,0,0,0.87);
 }
 
-.footer {
-  text-align: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+footer a{
+  color: #b0bec5
+}
+
+footer a:hover{
+  color: white !important;
 }
 
 .email-newsletter {
@@ -95,12 +87,176 @@ body {
   font-size: 12px !important;
 }
 
-.parceiro-img {
-  max-height: 100px;
-  opacity: 0.6;
-  margin: 0 auto;
+span.social-buttons-container {
+  display: inline-block;
+  height: 2em;
+  margin: 0;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+  margin-top: 0;
+  float: left;
+}
+
+.social-buttons li {
+  float: left;
+  margin: 0px 5px;
+  padding: 0;
+  border: 0;
+}
+
+ul.social-buttons li a {
   display: block;
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-size: 25px;
+  line-height: 40px;
+  outline: 0;
+  color: #fff;
+  background-color: #222;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+
+ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+p.contributor-description {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+strong {
+  font-weight: bold !important;
+}
+
+em {
+  font-style: italic !important;
+}
+
+/* Home */
+
+/* Scroll */
+
+  /* width */
+
+.card ::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+
+.card ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+.card ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+
+.card ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.card-home {
+  margin-top: 40px;
+}
+
+.card .card-content-horizontal .icon-dataset {
+  position: absolute;
+  font-size: 120px;
+  opacity: 10%;
+  top: 5%;
+  left: 55%;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.card .card-reveal .icon-dataset {
+  position: absolute;
+  font-size: 150px;
+  opacity: 5%;
+  top: 25%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  text-align: center;
+}
+
+.card-content-horizontal {
+  padding: 50px 15px 21px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .card-content-horizontal h3 {
+  margin-top: 0px;
+  min-height: 50px;
+  font-size: 1.3em;
+}
+
+.card .card-content-horizontal p {
+  margin-top: 15px;
+  padding-right: 5px;
+  font-size: 0.9em;
+  text-align: justify;
+  min-height: 120px;
+  max-height: 120px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.links {
+  margin-top: 15px;
+}
+
+.links a {
+  display: block;
+  margin-top: 3px;
+}
+
+.activator {
+  cursor: pointer;
+}
+
+.subtitle-tables {
+  font-size: 0.9em;
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+.header {
+  font-size: 27px;
+}
+
+.header-small {
+  font-size: 20px;
+}
+
+.header-subtitle {
+  font-size: 1.5em;
 }

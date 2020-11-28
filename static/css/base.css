@@ -32,8 +32,13 @@
 .m-t-15 {
   margin-top: 15px !important;
 }
+
 .m-t-20 {
   margin-top: 20px !important;
+}
+
+.m-t-50 {
+  margin-top: 50px !important;
 }
 
 .m-b-5 {
@@ -50,6 +55,10 @@
 
 .m-b-20 {
   margin-bottom: 20px !important;
+}
+
+.m-b-50 {
+  margin-bottom: 50px !important;
 }
 
 .p-5 {
@@ -113,7 +122,6 @@
 }
 
 /* Colors */
-
 .dark-blue {
   color: #3f51b5 !important;
 }
@@ -122,14 +130,35 @@
   color: #00695c !important;
 }
 
-.btn-dark-blue {
-  background-color: #3f51b5;
-  color: #fff !important;
+
+.dark-red {
+  color: #C1292E !important;
 }
 
+.btn-dark-blue {
+  background-color: #3f51b5 !important;
+  color: #fff !important;
+}
 .btn-dark-blue:hover {
-  background-color: #fff ;
+  background-color: #fff !important;
   color: #1A237E !important;
+}
+
+/* Closest AA compatible for color contrast (a11y) */
+a {
+  color: #007db6;
+}
+.btn, .btn-large, .btn-small, .btn-floating {
+  background-color: #008376;
+}
+.btn:hover, .btn-large:hover, .btn-small:hover, .btn-floating:hover {
+  background-color: #00897b;
+}
+.teal-text {
+  color: #008376 !important;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #008376;
 }
 
 .email-newsletter {
@@ -163,4 +192,13 @@
 
 .pagination li i {
   font-size: 1.3rem;
+}
+
+.error-container p{
+  font-size: 1.4rem;
+}
+
+.filter-error {
+  color: #ee6e73;
+  font-size: 1rem;
 }
